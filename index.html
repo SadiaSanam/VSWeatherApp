@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/30234b551c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Weather</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <span class="innerbody">
+        <div class="row">
+          <div class="col">
+            <div class="card-body1" style= "width: 18rem">
+              <h2 class="card-text">
+                <h2> <span id = description> </span></h2>
+                <br />
+                <h1>
+                  <span class="temperature" id="temperature"> </span> °C
+                  <span class="units">
+                                    
+                </h1>
+                <h4>
+                  <ul>
+                    <li>Humidity:<span id="humidity"> </span>%</li>
+                    <li>
+                       Wind:<span id="wind"> km/h </span>%
+                    </li>
+                   </ul>
+              </h4>
+            </div>
+          </div>
+          <div class="col">
+            <form id="city-input">
+              <input
+                type="text"
+                placeholder="City"
+                autofocus="on"
+                id="inputcity"
+              />
+              <input type="submit" placeholder="🔍" />
+              <button>
+                  Current City
+                </button>
+            </form>
+          </div>
+        </div>
+        <div class="displayingcity" id="search-form">
+          <div class="row">
+            <div class="col">
+              <h3>
+                <ul>
+                  <li id="city"></li>
+                  <li id="date"></li>
+                  <li id="day"></li>
+                  <li id="time"></li>
+                </ul>
+              </h3>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-body2">
+                <h2 class="card-text">
+                  Tuesday
+                  <br />
+                  <i class="fas fa-cloud-rain"></i>
+                  <br />
+                  60°
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body2">
+                <h2 class="card-text">
+                  Wednesday
+                  <br />
+                  <i class="fas fa-cloud-sun"></i>
+                  <br />
+                  67°
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body2">
+                <h2 class="card-text">
+                  Thursday
+                  <br />
+                  <i class="fas fa-cloud-sun"></i>
+                  <br />
+                  74°
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body2">
+                <h2 class="card-text">
+                  Friday
+                  <br />
+                  <i class="fas fa-cloud-sun"></i>
+                  <br />
+                  62°
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="card-body2">
+                <h2 class="card-text">
+                  Saturday
+                  <br />
+                  <i class="fas fa-cloud-sun"></i>
+                  <br />
+                  65°
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p> <a href="https://github.com/SadiaSanam/InitialRun">open-source code</a> by Sadia Sanam Sarwar</p>
+      </span>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
