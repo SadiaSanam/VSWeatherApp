@@ -24,59 +24,61 @@
 
   <body>
     <div class="container">
-      <span class="innerbody">
-        <div class="row">
-          
-          <div class="col">
-            <div class="card card-body1" style="width: 18rem;">
-              <h2 class="card-text">
-                <h2> <span id = description> </span></h2>
-                <br />
-                <h1>
-                  <span class="temperature" id="temperature"> </span> °C
-                  <span class="units">
-                                    
-                </h1>
-                <h4>
-                  <ul>
-                    <li>Humidity:<span id="humidity"> </span>%</li>
-                    <li>
-                       Wind:<span id="wind"> km/h </span>%
-                    </li>
-                   </ul>
-              </h4>
+      <h1>
+        louisville, KY
+      </h1>
+        <h3>
+          <ul class = "current-date">
+            <li id= "date"> today </li>  
+             <li id="time"> now </li>
+          </ul>
+        </h3>
+          <div class="row">
+            <div class="col-6">            
+              <div class="float-left">
+                <span class="description"> Cloudy </span>
+                <br/>
+                <span class="temperature"> 58</span>
+                <span class="units"> <a href="#">°C</a> | <a href="#">°F</a></span>     
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>
+                  Precipitation: %
+                </li>
+                <li>
+                  Humidity: %
+                </li>
+                <li>
+                  Wind: km/h
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="col">
-            <form id="city-input">
-              <input
-                type="text"
-                placeholder="City"
-                autofocus="on"
-                id="inputcity"
-              />
-              <input type="submit" placeholder="🔍" />
-              <button>
+            <form id="search-form">
+              <div class="row">
+                <div class="col-5">
+                  <input type="search"
+                  placeholder="City"
+                  autofocus = "on"
+                  class="form-control"
+                  />
+                </div>
+                <div class="col">
+                  <input
+                  type="submit"
+                  value="Search"
+                  class="control-button"/>
+                </div>
+              </div>
+              <div class="col">
+                <button>
                   Current City
                 </button>
+              </div>
             </form>
-          </div>
-        </div>
-        <div class="displayingcity" id="search-form">
-          <div class="row">
-            <div class="col">
-              <h3>
-                <ul>
-                  <li id="city"></li>
-                  <li id="date"></li>
-                  <li id="day"></li>
-                  <li id="time"></li>
-                </ul>
-              </h3>
-            </div>
-          </div>
-        </div>
-        <hr />
+            <hr />
         <div class="row">
           <div class="col">
             <div class="card">
@@ -144,8 +146,7 @@
             </div>
           </div>
         </div>
-
-<br/>
+        <br/>
         <p> <a href="https://github.com/SadiaSanam/InitialRun">open-source code</a> by Sadia Sanam Sarwar</p>
       </span>
     </div>

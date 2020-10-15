@@ -14,18 +14,57 @@ body {
   padding: 0;
   text-align:center;
 }
-ul {
-  list-style-type: none;
-}
-
 .container {
   background: url(darktheme.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: 100%;
   background-blend-mode: hue;
   border: 2px solid #885df1;
   border-radius: 35px;
   box-shadow: 10px 10px 8px rgb(182, 181, 181);
+}
+
+h1 {
+  font-weight: 100;
+  line-height: 50px;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 0;
+  }
+
+  h3 {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+.temperature, .description {
+ font-size: 64px;
+ font-weight: 300;
+ line-height: 1;
+ margin-left: 20px;
+}
+
+.units {
+  position: relative;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+.form-control{
+  background: transparent;
+  opacity: 0.5;
+  background: black;
+  border-top: 3px solid #ccc;
+  border-bottom: 3px solid #ccc;
+  margin-top: 5.0em;
 }
 
 input {
@@ -45,11 +84,6 @@ input {
 input .submit {
   position: relative;
   right: 0;
-  cursor: pointer;
-}
-
-input .submit:hover {
-  color: white;
   cursor: pointer;
 }
 
@@ -75,16 +109,10 @@ button:hover {
 .card {
   background: transparent;
   position: relative;
-  border: 1px solid #885df1;
-  border-radius: 35px;
-  box-shadow: 5px 5px 2px rgb(182, 181, 181);
+  border: none;
   margin: 0 auto;
   margin-top: 10px;
   padding: 0;
 }
 
-h3 {
-  text-align: center;
-  margin: 0 auto;
-  padding: 0;
-}
+
