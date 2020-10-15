@@ -1,82 +1,79 @@
-function formatDate(date) {
-  let day = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
-  ];
+let dateElement = document.querySelector("#date");
+let currentTime = new Date();
+let hours = currentTime.getHours();
+if (hours <10){
+  hours = `0${hours}`
+}
+let minutes = currentTime.getMinutes();
+if (minutes < 10){
+  hours = `0${minutes}`
+}
+let dayIndex = currentTime.getDay();
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
 
-  let month = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-  ];
-  let year = date.getFullYear();
-  let day = date.getDay();
-  let month = date.getMonth();
-  let date = date.getDate();
+dateElement.innerHTML = `${days[dayIndex]}, ${hours}:${minutes}`;
 
+let yearElement = document.querySelector("#year");
+let currentdate = new Date();
+let monthIndex = currentdate.getMonth();
+let months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+];
+let date = currentdate.getDate();
+let year = currentdate.getFullYear();
 
-  let formattedDate = `${day}, ${date} ${month} ${year}`;
+yearElement.innerHTML = `${months[monthIndex]}, ${date}, ${year}`;
 
-  return formattedDate
-  };
+let searchForm = document.querySelector("#search-form");
 
-  let dateElement = document.querySelector("#date");
-  let currentTime = new Date();
-  dateElement.innerHTML = formatDate(date);
+searchForm.addEventListener("submit", search);
 
-  function formatTime(now){
-    let hour = now.getHours();
-    if (hour < 10){
-      hour = `0${hour}`
-    }
-    let minute = now.getMinutes();
-    if (minute < 10) {
-      minute = `0${minute}`
-    }
-    return `${hour}:${minute}`
-  } 
-  let timeElement = document.querySelector("#time");
-  time.innerHTML = formatTime(now);
+function search(event){
+  event.preventDefault();
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = cityInput.value;
+  let cityInput = document.querySelector("#city-input")
+  city
+}
 
-  function search(event) {
-    event.preventDefault();
-    let cityElement = document.querySelector("#city");
-    let cityInput = document.querySelector("#city-input");
-    cityElement.innerHTML = cityInput.value;
-  }
-  
-  function convertToFahrenheit(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = 66;
-  }
-  
-  function convertToCelsius(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = 19;
-  }
-   
-  let searchForm = document.querySelector("#search-form");
-  searchForm.addEventListener("submit", search);
-  
-  let fahrenheitLink = document.querySelector("#fahrenheit-link");
-  fahrenheitLink.addEventListener("click", convertToFahrenheit);
-  
-  let celsiusLink = document.querySelector("#celsius-link");
-  celsiusLink.addEventListener("click", convertToCelsius);
-  
+let temperatureElement = document.querySelector("#temperature");
+let temperature = temperatureElement.innerHTML;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
+
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperature = Number(temperature);
+  temperatureElement.innerHTML = Math.round((temperature -32) * 5/9);
+}
+
+function convertToCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperature = Number(temperature);
+  temperatureElement.innerHTML = Math.round((temperature * 9)/5 +32);
+}
