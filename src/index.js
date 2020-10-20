@@ -99,7 +99,7 @@ function searchLocation(position) {
   let units = "metric";
   let apiUrl = `${apiEndpoint}?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
 
-  axios.get(apiUrl).then(currentTemperature);
+  axios.get(apiUrl).then(displayWeatherCondition);
 }
 
 function getcurrentLocation(event) {
