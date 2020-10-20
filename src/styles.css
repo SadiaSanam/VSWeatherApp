@@ -57,6 +57,8 @@ h3 {
 
 ul {
   list-style-type: none;
+  font-size: 30px;
+  font-weight: 300;
 }
 
 .form-control {
@@ -114,4 +116,9 @@ button:hover {
   margin: 0 auto;
   margin-top: 10px;
   padding: 0;
+}
+
+.description {
+  font-size: 30px;
+  font-weight: 300;
 }

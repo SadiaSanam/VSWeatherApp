@@ -25,39 +25,34 @@
   <body>
     <div class="container">
       <h1 id="city">
-        louisville, KY
+        
       </h1>
       <h2 id="zipCode">
-        40214
+      
       </h2>
       <h3>
         <ul class="current-date">
-          <li id="date">today</li>
-          <li id="year">now</li>
+          <li id="date"></li>
+          <li id="year"></li>
         </ul>
       </h3>
       <div class="row">
         <div class="col-6">
-          <div class="float-left">
-            <span class="description"> Cloudy </span>
+            <span id="description"> </span>
             <br />
-            <span class="temperature" id="temperature"> 58</span>
+            <span class="temperature" id="temperature"></span>
             <span class="units">
               <a href="#" id="celsiusLink">°C</a> |
               <a href="#" id="fahrenheitLink">°F</a></span
             >
-          </div>
         </div>
         <div class="col-6">
           <ul>
             <li>
-              Precipitation: %
+              Humidity:<span id="humidity"> </span>%
             </li>
             <li>
-              Humidity: %
-            </li>
-            <li>
-              Wind: km/h
+              Wind:<span id="wind"> </span>km/h
             </li>
           </ul>
         </div>
@@ -73,7 +68,7 @@
               id="city-input"
             />
             <input type="submit" value="Search" class="control-button" />
-            <button type="button">
+            <button class="button" id="current-location-button">
               Current City
             </button>
           </form>
