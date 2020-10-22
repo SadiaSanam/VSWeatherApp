@@ -90,6 +90,11 @@ input .submit {
   cursor: pointer;
 }
 
+.control-button:hover {
+  color: white;
+  cursor: pointer;
+}
+
 button {
   background: transparent;
   border: 1px solid #885df1;
@@ -118,7 +123,15 @@ button:hover {
   padding: 0;
 }
 
-.description {
+#description {
   font-size: 30px;
   font-weight: 300;
+}
+.weatherTemperature .active {
+  color: whitesmoke;
+  cursor: default;
+}
+
+.weatherTemperature .active:hover {
+  text-decoration: none;
 }

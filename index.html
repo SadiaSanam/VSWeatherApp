@@ -38,13 +38,18 @@
       </h3>
       <div class="row">
         <div class="col-6">
+          <div class="weatherTemperature">
             <span id="description"> </span>
+            <img src="#"
+            alt="currentWeatherIcon"
+            id="icon"/>
             <br />
             <span class="temperature" id="temperature"></span>
             <span class="units">
-              <a href="#" id="celsiusLink">°C</a> |
+              <a href="#" id="celsiusLink" class="active">°C</a> |
               <a href="#" id="fahrenheitLink">°F</a></span
             >
+          </div>
         </div>
         <div class="col-6">
           <ul>
@@ -67,7 +72,7 @@
               class="form-control"
               id="city-input"
             />
-            <input type="submit" value="Search" class="control-button" />
+            <input type="submit" value="Search" class="control-button"/>
             <button class="button" id="current-location-button">
               Current City
             </button>
