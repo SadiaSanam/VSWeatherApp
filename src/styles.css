@@ -73,7 +73,7 @@ ul {
 input {
   background: transparent;
   border: 1px solid #885df1;
-  border-radius: 35px;
+  border-radius: 25px;
   box-shadow: 5px 5px 2px rgb(182, 181, 181);
   color: #885df1;
   font-size: 15px;
@@ -135,3 +135,10 @@ button:hover {
 .weatherTemperature .active:hover {
   text-decoration: none;
 }
+
+#icon {
+  background: transparent;
+  background-color: rgb(199, 177, 177);
+  border-radius: 35px;
+  opacity: 1.5;
+  }
