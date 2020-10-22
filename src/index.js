@@ -96,8 +96,8 @@ function convertToFahrenheit(event) {
   let temperatureElement = document.querySelector("#temperature");
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  let fahrenheitLink = (celsiusTemperature * 9) /5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitLink);
 }
 
 let celsiusTemperature = null;
