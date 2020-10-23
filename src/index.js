@@ -47,16 +47,26 @@ let searchForm = document.querySelector("#search-form");
 
 searchForm.addEventListener("submit", search);
 
-function displayWeatherCondition (response) {
+function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
-  document.querySelector("#humidity").innerHTML = Math.round(response.data.main.humidity);
-  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
-  document.querySelector("#description").innerHTML = response.data.weather[0].main;
- let iconElement = document.querySelector("#icon");
- iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
- iconElement.setAttribute("alt", response.data.weather[0].main)
- celsiusTemperature = response.data.main.temp;
+  document.querySelector("#temperature").innerHTML = Math.round(
+    response.data.main.temp
+  );
+  document.querySelector("#humidity").innerHTML = Math.round(
+    response.data.main.humidity
+  );
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  );
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].main;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].main);
+  celsiusTemperature = response.data.main.temp;
 }
 
 function search(event) {
@@ -96,8 +106,8 @@ function convertToFahrenheit(event) {
   let temperatureElement = document.querySelector("#temperature");
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
-  let fahrenheitLink = (celsiusTemperature * 9) /5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitLink);
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 let celsiusTemperature = null;

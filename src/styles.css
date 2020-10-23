@@ -15,7 +15,7 @@ body {
   text-align: center;
 }
 .container {
-  background-image: url(darktheme.jpg) ;
+  background-image: url(darktheme.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
