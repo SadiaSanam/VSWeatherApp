@@ -76,6 +76,9 @@ function search(event) {
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
   let apiUrl = `${apiEndpoint}?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 let currentLocationButton = document.querySelector("#current-location-button");
@@ -90,6 +93,9 @@ function searchLocation(position) {
   let apiUrl = `${apiEndpoint}?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
 
   axios.get(apiUrl).then(displayWeatherCondition);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast??lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function getcurrentLocation(event) {
@@ -165,7 +171,9 @@ function displayForecast(response) {
         ${formatHours(forecast.dt * 1000)}
       </h3>
       <img
-        src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+        src="http://openweathermap.org/img/wn/${
+          forecast.weather[0].icon
+        }@2x.png"
       />
       <div class="weather-forecast-temperature">
         <strong>
@@ -176,11 +184,4 @@ function displayForecast(response) {
     </div>
   `;
   }
-}
-
-function hourlyforecast(event) {
-  event.preventDefault();
-  let apiKey = "0a20e0390f583da09083f85d22ebb0d5";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForecast);
 }
