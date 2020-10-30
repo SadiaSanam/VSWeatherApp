@@ -94,7 +94,7 @@ function searchLocation(position) {
 
   axios.get(apiUrl).then(displayWeatherCondition);
 
-  apiUrl = `https://api.openweathermap.org/data/2.5/forecast??lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
 
